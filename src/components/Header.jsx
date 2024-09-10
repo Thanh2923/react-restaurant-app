@@ -5,7 +5,7 @@ import {  faCartShopping} from '@fortawesome/free-solid-svg-icons';
 const Header = () => {
   return (
  
-    <div className=" p-6 px-16 w-full fixed flex  justify-between">
+    <div className=" p-6 px-16 w-full fixed flex  z-50 bg-purple-50 justify-between">
         <div className="flex gap-2 ">
            <img className='w-[2rem] h-[2rem]' src={logo} alt="" />
            <h3 className='text-xl font-bold'>City</h3>
