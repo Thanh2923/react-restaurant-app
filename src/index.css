@@ -7,9 +7,20 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
     color: rgb(81 81 81 );
 
 }
+
+.hover-zoom {
+    transition: transform 0.1s ease-in-out;
+}
+.hover-zoom:hover {
+    transform: scale(1.2);
+}
+
 .bg-cardOverplay {
-    background-color: hsla(0, 0%, 100%, .4);
+    background-color: hsla(0, 0%, 100%, .7);
 }
 .text-lighttextGray {--tw-text-opacity: 1;
 color: rgb(156 160 171 / var(--tw-text-opacity));
+}
+.capitalize {
+    text-transform: capitalize;
 }

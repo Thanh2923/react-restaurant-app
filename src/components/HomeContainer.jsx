@@ -1,6 +1,7 @@
 import motobyce from '../assets/motobyce.png'
 import heroBg from '../assets/heroBg.png'
-import Icecream from '../assets/Icecream.png'
+
+import ItemProductHome from './ItemProductHome'
 const HomeContainer = () => {
   return (
     <section className="grid grid-cols-1  w-full gap-6 md:grid-cols-2">
@@ -19,48 +20,17 @@ const HomeContainer = () => {
       </p>
       <p className='text-base text-text-textColor'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt consectetur, odio dolor quo aspernatur eum optio, tempore, voluptate iure atque quia reprehenderit! Aliquid, necessitatibus aspernatur. Tempore sapiente error nobis illum.</p>
      
-       
+       <button type='button' className='bg-orange-500 py-2 px-4 text-base font-semibold rounded-lg mt-7 hover:drop-shadow-lg'>Order Now</button>
       
     </div>
     <div className='w-full  gap-6 justify-center flex-1 flex-col relative'>
           <img src={heroBg}  className='h-50 w-[70%] ml-auto ' alt="" />
           <div className='absolute w-full top-0 left-0 justify-center flex-wrap flex items-center gap-3  '>
-             <div className='bg-cardOverplay p-5 mt-5 flex flex-col justify-center items-center rounded-sm shadow-lg '>
-                    <img src={ Icecream} className='w-40 ' alt=""  />
-                    <p className='text-xl text-textColor font-semibold '>Icecream</p>
-                    <p className='text-lighttextGray text-base font-semibold'>Chocolate & vanilla</p>
-                    <p className='text-base font-semibold'>
-                      <span className='text-xs text-red-500'>$</span>
-                      5.25
-                    </p>
-             </div>
-             <div className='bg-cardOverplay p-5 mt-5 flex flex-col justify-center items-center rounded-sm shadow-lg '>
-                    <img src={ Icecream} className='w-40 ' alt=""  />
-                    <p className='text-xl text-textColor font-semibold '>Icecream</p>
-                    <p className='text-lighttextGray text-base font-semibold'>Chocolate & vanilla</p>
-                    <p className='text-base font-semibold'>
-                      <span className='text-xs text-red-500'>$</span>
-                      5.25
-                    </p>
-             </div>
-             <div className='bg-cardOverplay p-5 mt-5 flex flex-col justify-center items-center rounded-sm shadow-lg '>
-                    <img src={ Icecream} className='w-40 ' alt=""  />
-                    <p className='text-xl text-textColor font-semibold '>Icecream</p>
-                    <p className='text-lighttextGray text-base font-semibold'>Chocolate & vanilla</p>
-                    <p className='text-base font-semibold'>
-                      <span className='text-xs text-red-500'>$</span>
-                      5.25
-                    </p>
-             </div>
-             <div className='bg-cardOverplay p-5 mt-5 flex flex-col justify-center items-center rounded-sm shadow-lg '>
-                    <img src={ Icecream} className='w-40 ' alt=""  />
-                    <p className='text-xl text-textColor font-semibold '>Icecream</p>
-                    <p className='text-lighttextGray text-base font-semibold'>Chocolate & vanilla</p>
-                    <p className='text-base font-semibold'>
-                      <span className='text-xs text-red-500'>$</span>
-                      5.25
-                    </p>
-             </div>
+            <ItemProductHome/>
+            <ItemProductHome/>
+            <ItemProductHome/>
+            <ItemProductHome/>
+            
            
             
              
