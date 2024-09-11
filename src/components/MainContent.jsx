@@ -1,4 +1,6 @@
+import CartContainer from "./CartContainer"
 import HomeContainer from "./HomeContainer"
+import MenuContainer from "./MenuContainer"
 import OurFresh from "./OurFresh"
 
 
@@ -7,7 +9,9 @@ const MainContent = () => {
    <main className="w-full h-full p-6 px-16 mt-20">
       <div className="w-full h-auto flex-col flex items-center justify-center">
         <HomeContainer/>
+        <CartContainer/>
         <OurFresh/>
+        <MenuContainer/>
       </div>
    </main>
   )
