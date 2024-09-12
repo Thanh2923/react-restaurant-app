@@ -11,7 +11,8 @@ const Header = () => {
         <h3 className="text-xl font-bold">City</h3>
       </div>
       <div className="flex gap-8 items-center">
-        <ul className="gap-8 flex">
+       <div className='hidden md:block'>
+       <ul className=" gap-8 flex    ">
           <li className="relative list-none text-base font-medium text-textColor hover:cursor-pointer hover:before:w-full before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-orange-500 before:transition-all before:duration-300">
             Home
           </li>
@@ -25,6 +26,7 @@ const Header = () => {
             Service
           </li>
         </ul>
+       </div>
         <div className="cart hover:cursor-pointer flex justify-center">
           <FontAwesomeIcon icon={faCartShopping} />
         </div>
