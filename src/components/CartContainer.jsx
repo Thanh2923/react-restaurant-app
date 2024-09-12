@@ -1,10 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLeftLong,faBroom } from '@fortawesome/free-solid-svg-icons';
 import imgCart from '../assets/imgCart.svg'
+import CartItemContainer from './CartItemContainer';
+import TatalCart from './TatalCart';
 
 const CartContainer = () => {
   return (
-    <div className="fixed top-0 py-5 px-5 right-0 w-[27%] shadow-lg rounded-sm z-20 h-screen bg-white ">
+    <div className="fixed top-0 py-5 px-5 right-0 w-[27%]  shadow-lg rounded-sm z-20 h-screen bg-white ">
       <div className="w-full mb-10  flex justify-between items-center">
        
         <FontAwesomeIcon icon={faLeftLong} className='font-bold text-xl' />
@@ -21,7 +23,10 @@ const CartContainer = () => {
            </div>
            <p className='text-textColor font-semibold flex justify-center items-center py-5 text-xl'>Add some items to your cart</p>
       </div>
+      <CartItemContainer/>
+      <TatalCart/>
     </div>
+   
   )
 }
 

@@ -24,3 +24,21 @@ color: rgb(156 160 171 / var(--tw-text-opacity));
 .capitalize {
     text-transform: capitalize;
 }
+.bg-cartBg {
+    --tw-bg-opacity: 1;
+    background-color: rgb(40 42 44 / var(--tw-bg-opacity));
+}
+.bg-cartItem {
+    --tw-bg-opacity: 1;
+    background-color: rgb(46 48 51 / var(--tw-bg-opacity));
+}
+/* Ẩn thanh cuộn nhưng vẫn cho phép cuộn */
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hidden {
+    -ms-overflow-style: none;  /* IE và Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  
