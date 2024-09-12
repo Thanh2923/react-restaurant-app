@@ -1,5 +1,6 @@
 import ButtonCategory from "./ButtonCategory"
-import ItemOurFresh from "./ItemOurFresh"
+import ItemMenu from "./ItemMenu"
+
 
 
 const MenuContainer = () => {
@@ -12,10 +13,11 @@ const MenuContainer = () => {
                 
                  </div>
                  <div className="flex flex-wrap justify-between mb-10  gap-3 items-center mt-5">
-                  <ItemOurFresh/>
-                  <ItemOurFresh/>
-                  <ItemOurFresh/>
-                  <ItemOurFresh/>
+                  <ItemMenu/>
+                  <ItemMenu/>
+                  <ItemMenu/>
+                  <ItemMenu/>
+                  <ItemMenu/>
 
                   </div>
             </div>

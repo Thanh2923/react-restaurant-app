@@ -8,7 +8,7 @@ const CartItem = () => {
     <div className="w-full flex rounded-md flex-col justify-center items-center gap-3 bg-cartItem ">
     <div className="w-full flex gap-3 py-1 px-3 items-center">
         <img src={C1} alt="c1" className='w-20 h-20 max-w-[60px]' />
-        <div className='flex flex-col  '>
+        <div className='flex flex-col '>
             <p className='text-gray-50 font-semibold text-base'>Chicken Mani</p>
             <p className='text-sm text-gray-300 font-semibold'>$35</p>
         </div>

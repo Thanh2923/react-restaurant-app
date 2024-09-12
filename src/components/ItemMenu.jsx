@@ -1,15 +1,9 @@
 import T1 from '../assets/t1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {    faCartShopping} from '@fortawesome/free-solid-svg-icons';
-import { useSelector,useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { getDataFoodByCategory } from '../redux/Food_Thunk';
-const ItemOurFresh = () => {
-    const dispatch = useDispatch();
-    const data = useSelector(state=>state.Food.Food)
-    useEffect(()=>{
-      dispatch(getDataFoodByCategory(5))
-  },[dispatch])
+
+const ItemMenu = () => {
+  
     
   return (
     <div className="w-[280px] hover:drop-shadow-lg rounded-lg h-[195px] bg-cardOverplay ">
@@ -33,4 +27,4 @@ const ItemOurFresh = () => {
   )
 }
 
-export default ItemOurFresh
+export default ItemMenu
