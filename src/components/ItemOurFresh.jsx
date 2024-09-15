@@ -1,36 +1,43 @@
-import T1 from '../assets/t1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {    faCartShopping} from '@fortawesome/free-solid-svg-icons';
-import { useSelector,useDispatch } from 'react-redux';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getDataFoodByCategory } from '../redux/Food_Thunk';
+import { getDataFoodFruitsByCategory } from '../redux/Food_Thunk';
+
 const ItemOurFresh = () => {
-    const dispatch = useDispatch();
-    const data = useSelector(state=>state.Food.Food)
-    useEffect(()=>{
-      dispatch(getDataFoodByCategory(5))
-  },[dispatch])
-    
+  const dispatch = useDispatch();
+  const FoodFruits = useSelector(state => state.Food.FoodFruits);
+
+ 
+
+  useEffect(() => {
+    dispatch(getDataFoodFruitsByCategory(5));
+  }, [dispatch]);
+
   return (
-    <div className="w-[280px] hover:drop-shadow-lg rounded-lg h-[195px] bg-cardOverplay ">
-    <div className="flex justify-between items-center">
-      <div className='w-36 imgShowTo mx-3 drop-shadow-2xl'>
-      <img src={T1} className='w-full hover-zoom' alt="t1" />
-      </div>
-      <div className='w-7 hover:cursor-pointer h-7 flex justify-center items-center bg-red-700 rounded-full mx-3'>
-      <FontAwesomeIcon className='text-[0.75rem]' icon={faCartShopping} style={{color: "#ffffff",}} />
-      </div>
-    </div>
-    <div className='flex w-full flex-col justify-end items-end'>
-       <p className=' font-semibold text-xl px-3'>Strawberry</p>
-       <p className='text-lighttextGray px-3'>120 Calories</p>
-       <p className='px-3 pt-4 font-semibold text-xl'>
-           <span className='text-red-600 text-base'> $</span>32
-       </p>
+    <>
+      {FoodFruits.map((item) => (
+        <div key={item.id} className="w-[280px] hover:drop-shadow-lg rounded-lg h-[195px] bg-cardOverplay">
+          <div className="flex justify-between items-center">
+            <div className='w-36 imgShowTo mx-3 drop-shadow-2xl'>
+              {/* Nối đường dẫn assets với tên ảnh */}
+              <img src={item.img} className='w-full h-[110px] hover-zoom' alt={item.name} />
+            </div>
+            <div className='w-7 hover:cursor-pointer h-7 flex justify-center items-center bg-red-700 rounded-full mx-3'>
+              <FontAwesomeIcon className='text-[0.75rem]' icon={faCartShopping} style={{ color: "#ffffff" }} />
+            </div>
+          </div>
+          <div className='flex w-full flex-col justify-end items-end'>
+            <p className='font-semibold text-xl px-3'>{item.name}</p>
+            <p className='text-lighttextGray px-3'>{item.calories} Calories</p>
+            <p className='px-3 pt-4 font-semibold text-xl'>
+              <span className='text-red-600 text-base'>$</span>{item.price}
+            </p>
+          </div>
+        </div>
+      ))}
+    </>
+  );
+};
 
-    </div>
-  </div>
-  )
-}
-
-export default ItemOurFresh
+export default ItemOurFresh;

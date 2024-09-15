@@ -1,0 +1,308 @@
+{
+    "Categories": [
+      { "id": 1, "name": "Chicken" },
+      { "id": 2, "name": "Curry" },
+      { "id": 3, "name": "Rice" },
+      { "id": 4, "name": "Fish" },
+      { "id": 5, "name": "Fruits" },
+      { "id": 6, "name": "Icecreams" },
+      { "id": 7, "name": "Soft Drinks" }
+    ],
+    "Food": [
+      {
+        "id": 1,
+        "idCategories": 1,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/c1.png?alt=media&token=ad323ae2-1039-48a8-b6e7-2524195193f0",
+        "name": "Chicken Mani",
+        "price": 15
+      },
+      {
+        "id": 2,
+        "idCategories": 1,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/c2.png?alt=media&token=c2-token-placeholder",
+        "name": "Grilled Chicken",
+        "price": 20
+      },
+      {
+        "id": 3,
+        "idCategories": 1,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/c3.png?alt=media&token=c3-token-placeholder",
+        "name": "Fried Chicken",
+        "price": 18
+      },
+      {
+        "id": 4,
+        "idCategories": 1,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/c4.png?alt=media&token=c4-token-placeholder",
+        "name": "Chicken Burger",
+        "price": 10.5
+      },
+      {
+        "id": 5,
+        "idCategories": 1,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/c5.png?alt=media&token=c5-token-placeholder",
+        "name": "Chicken Wings",
+        "price": 12.3
+      },
+      {
+        "id": 6,
+        "idCategories": 1,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/c6.png?alt=media&token=c6-token-placeholder",
+        "name": "Chicken Salad",
+        "price": 14.5
+      },
+      {
+        "id": 7,
+        "idCategories": 2,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/cu1.png?alt=media&token=cu1-token-placeholder",
+        "name": "Spicy Curry",
+        "price": 12
+      },
+      {
+        "id": 8,
+        "idCategories": 2,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/cu2.png?alt=media&token=cu2-token-placeholder",
+        "name": "Coconut Curry",
+        "price": 16.4
+      },
+      {
+        "id": 9,
+        "idCategories": 2,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/cu3.png?alt=media&token=cu3-token-placeholder",
+        "name": "Beef Curry",
+        "price": 18
+      },
+      {
+        "id": 10,
+        "idCategories": 2,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/cu4.png?alt=media&token=cu4-token-placeholder",
+        "name": "Lamb Curry",
+        "price": 20
+      },
+      {
+        "id": 11,
+        "idCategories": 2,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/cu5.png?alt=media&token=cu5-token-placeholder",
+        "name": "Vegetable Curry",
+        "price": 10
+      },
+      {
+        "id": 12,
+        "idCategories": 2,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/cu6.png?alt=media&token=cu6-token-placeholder",
+        "name": "Paneer Curry",
+        "price": 14
+      },
+      {
+        "id": 13,
+        "idCategories": 3,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/r1.png?alt=media&token=r1-token-placeholder",
+        "name": "Steamed Rice",
+        "price": 20
+      },
+      {
+        "id": 14,
+        "idCategories": 3,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/r2.png?alt=media&token=r2-token-placeholder",
+        "name": "Fried Rice",
+        "price": 12
+      },
+      {
+        "id": 15,
+        "idCategories": 3,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/r3.png?alt=media&token=r3-token-placeholder",
+        "name": "Basmati Rice",
+        "price": 10.5
+      },
+      {
+        "id": 16,
+        "idCategories": 3,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/r4.png?alt=media&token=r4-token-placeholder",
+        "name": "Brown Rice",
+        "price": 9
+      },
+      {
+        "id": 17,
+        "idCategories": 3,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/r5.png?alt=media&token=r5-token-placeholder",
+        "name": "Garlic Rice",
+        "price": 11
+      },
+      {
+        "id": 18,
+        "idCategories": 3,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/r6.png?alt=media&token=r6-token-placeholder",
+        "name": "Lemon Rice",
+        "price": 13.3
+      },
+      {
+        "id": 19,
+        "idCategories": 4,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/f1.png?alt=media&token=f1-token-placeholder",
+        "name": "Grilled Fish",
+        "price": 18
+      },
+      {
+        "id": 20,
+        "idCategories": 4,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/f2.png?alt=media&token=f2-token-placeholder",
+        "name": "Fried Fish",
+        "price": 16.4
+      },
+      {
+        "id": 21,
+        "idCategories": 4,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/f3.png?alt=media&token=f3-token-placeholder",
+        "name": "Fish Tacos",
+        "price": 14
+      },
+      {
+        "id": 22,
+        "idCategories": 4,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/f4.png?alt=media&token=f4-token-placeholder",
+        "name": "Fish Curry",
+        "price": 20.5
+      },
+      {
+        "id": 23,
+        "idCategories": 4,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/f5.png?alt=media&token=f5-token-placeholder",
+        "name": "Fish Salad",
+        "price": 12
+      },
+      {
+        "id": 24,
+        "idCategories": 4,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/f6.png?alt=media&token=f6-token-placeholder",
+        "name": "Fish Soup",
+        "price": 15
+      },
+      {
+        "id": 25,
+        "idCategories": 5,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/fr1.png?alt=media&token=fr1-token-placeholder",
+        "name": "Fresh Fruit Salad",
+        "price": 10.7
+      },
+      {
+        "id": 26,
+        "idCategories": 5,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/fr2.png?alt=media&token=fr2-token-placeholder",
+        "name": "Apple Slices",
+        "price": 6
+      },
+      {
+        "id": 27,
+        "idCategories": 5,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/fr3.png?alt=media&token=fr3-token-placeholder",
+        "name": "Orange Wedges",
+        "price": 5.9
+      },
+      {
+        "id": 28,
+        "idCategories": 5,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/fr4.png?alt=media&token=fr4-token-placeholder",
+        "name": "Banana Split",
+        "price": 7
+      },
+      {
+        "id": 29,
+        "idCategories": 5,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/fr5.png?alt=media&token=fr5-token-placeholder",
+        "name": "Mango Slices",
+        "price": 8.3
+      },
+      {
+        "id": 30,
+        "idCategories": 5,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/fr6.png?alt=media&token=fr6-token-placeholder",
+        "name": "Fruit Parfait",
+        "price": 12
+      },
+      {
+        "id": 31,
+        "idCategories": 6,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/i1.png?alt=media&token=i1-token-placeholder",
+        "name": "Vanilla Ice Cream",
+        "price": 5.5
+      },
+      {
+        "id": 32,
+        "idCategories": 6,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/i2.png?alt=media&token=i2-token-placeholder",
+        "name": "Chocolate Ice Cream",
+        "price": 6
+      },
+      {
+        "id": 33,
+        "idCategories": 6,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/i3.png?alt=media&token=i3-token-placeholder",
+        "name": "Strawberry Ice Cream",
+        "price": 6.3
+      },
+      {
+        "id": 34,
+        "idCategories": 6,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/i4.png?alt=media&token=i4-token-placeholder",
+        "name": "Mango Ice Cream",
+        "price": 7
+      },
+      {
+        "id": 35,
+        "idCategories": 6,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/i5.png?alt=media&token=i5-token-placeholder",
+        "name": "Cookies and Cream Ice Cream",
+        "price": 8.5
+      },
+      {
+        "id": 36,
+        "idCategories": 6,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/i6.png?alt=media&token=i6-token-placeholder",
+        "name": "Pistachio Ice Cream",
+        "price": 23.6
+      },
+      {
+        "id": 37,
+        "idCategories": 7,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/d1.png?alt=media&token=d1-token-placeholder",
+        "name": "Coca Cola",
+        "price": 2
+      },
+      {
+        "id": 38,
+        "idCategories": 7,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/d2.png?alt=media&token=d2-token-placeholder",
+        "name": "Pepsi",
+        "price": 2.5
+      },
+      {
+        "id": 39,
+        "idCategories": 7,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/d3.png?alt=media&token=d3-token-placeholder",
+        "name": "Sprite",
+        "price": 2.9
+      },
+      {
+        "id": 40,
+        "idCategories": 7,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/d4.png?alt=media&token=d4-token-placeholder",
+        "name": "Fanta",
+        "price": 2
+      },
+      {
+        "id": 41,
+        "idCategories": 7,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/d5.png?alt=media&token=d5-token-placeholder",
+        "name": "Mountain Dew",
+        "price": 3
+      },
+      {
+        "id": 42,
+        "idCategories": 7,
+        "img": "https://firebasestorage.googleapis.com/v0/b/react-restaurant-app-8c39d.appspot.com/o/d6.png?alt=media&token=d6-token-placeholder",
+        "name": "Dr Pepper",
+        "price": 3.9
+      }
+    ]
+  }
+  

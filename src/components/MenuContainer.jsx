@@ -12,12 +12,9 @@ const MenuContainer = () => {
                 <ButtonCategory/>
                 
                  </div>
-                 <div className="flex flex-wrap justify-between mb-10  gap-3 items-center mt-5">
+                 <div className="flex flex-wrap justify-center mb-10  gap-3 items-center mt-5">
                   <ItemMenu/>
-                  <ItemMenu/>
-                  <ItemMenu/>
-                  <ItemMenu/>
-                  <ItemMenu/>
+                  
 
                   </div>
             </div>

@@ -2,6 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
    Food: [],
+   FoodFruits:[],
+  
 };
 
 export const SliceFood = createSlice({
@@ -10,6 +12,9 @@ export const SliceFood = createSlice({
   reducers: {
     fetchDataFood(state,action) {
       state.Food = action.payload
+    },
+    fetchDataFoodFruits(state,action) {
+      state.FoodFruits = action.payload
     },
   
     // addUsers(state, action) {
@@ -28,5 +33,5 @@ export const SliceFood = createSlice({
 });
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const {  fetchDataFood } = SliceFood.actions;
+export const {  fetchDataFood, fetchDataFoodFruits } = SliceFood.actions;
 
