@@ -15,6 +15,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
     transform: scale(1.2);
 }
 
+.viewButton{
+  transition: transform 0.1s ease-in-out;
+  transform: scale(1.1);
+}
+
 .bg-cardOverplay {
     background-color: hsla(0, 0%, 100%, .7);
 }
@@ -50,6 +55,7 @@ color: rgb(156 160 171 / var(--tw-text-opacity));
     to {
       transform: translateX(0);
       opacity: 1;
+      
     }
   }
   

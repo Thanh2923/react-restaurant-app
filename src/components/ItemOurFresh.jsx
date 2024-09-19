@@ -3,16 +3,21 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getDataFoodFruitsByCategory } from '../redux/Food_Thunk';
+import { addCart } from '../redux/SliceCart'; // Import the addCart action
 
 const ItemOurFresh = () => {
   const dispatch = useDispatch();
   const FoodFruits = useSelector(state => state.Food.FoodFruits);
-
- 
-
+  
+  
   useEffect(() => {
-    dispatch(getDataFoodFruitsByCategory(5));
+    dispatch(getDataFoodFruitsByCategory(5)); // Fetch food items of category 5
   }, [dispatch]);
+
+  // Function to handle adding an item to the cart
+  const handleClickAddCart = (item) => {
+    dispatch(addCart(item)); // Dispatch the addCart action with the item data
+  }
 
   return (
     <>
@@ -20,10 +25,14 @@ const ItemOurFresh = () => {
         <div key={item.id} className="w-[280px] hover:drop-shadow-lg rounded-lg h-[195px] bg-cardOverplay">
           <div className="flex justify-between items-center">
             <div className='w-36 imgShowTo mx-3 drop-shadow-2xl'>
-              {/* Nối đường dẫn assets với tên ảnh */}
+              {/* Display the item image */}
               <img src={item.img} className='w-full h-[110px] hover-zoom' alt={item.name} />
             </div>
-            <div className='w-7 hover:cursor-pointer h-7 flex justify-center items-center bg-red-700 rounded-full mx-3'>
+            {/* Cart icon to add the item to the cart */}
+            <div 
+              onClick={() => handleClickAddCart(item)} // Call the handleClickAddCart function with the item data
+              className='w-7 hover:cursor-pointer h-7 flex justify-center items-center bg-red-700 rounded-full mx-3'
+            >
               <FontAwesomeIcon className='text-[0.75rem]' icon={faCartShopping} style={{ color: "#ffffff" }} />
             </div>
           </div>

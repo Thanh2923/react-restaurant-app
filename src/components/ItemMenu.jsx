@@ -3,6 +3,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getDataFoodByCategory } from '../redux/Food_Thunk';
+import { addCart } from '../redux/SliceCart'; // Import the addCart action
 
 const ItemOurFresh = () => {
   const dispatch = useDispatch();
@@ -10,6 +11,11 @@ const ItemOurFresh = () => {
   useEffect(() => {
     dispatch(getDataFoodByCategory(1));
   }, [dispatch]);
+
+   // Function to handle adding an item to the cart
+   const handleClickAddCart = (item) => {
+    dispatch(addCart(item)); // Dispatch the addCart action with the item data
+  }
 
   return (
     <>
@@ -20,7 +26,7 @@ const ItemOurFresh = () => {
               {/* Nối đường dẫn assets với tên ảnh */}
               <img src={item.img} className='w-full h-[110px] hover-zoom' alt={item.name} />
             </div>
-            <div className='w-7 hover:cursor-pointer h-7 flex justify-center items-center bg-red-700 rounded-full mx-3'>
+            <div onClick={()=>handleClickAddCart(item)} className='w-7 hover:cursor-pointer h-7 flex justify-center items-center bg-red-700 rounded-full mx-3'>
               <FontAwesomeIcon className='text-[0.75rem]' icon={faCartShopping} style={{ color: "#ffffff" }} />
             </div>
           </div>

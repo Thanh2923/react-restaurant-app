@@ -3,10 +3,11 @@ import avtata from '../assets/avata.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch,useSelector } from 'react-redux';
-import { useEffect } from 'react';
+
 import { setCart } from '../redux/SliceCart';
 const Header = () =>  {
   const cartItems = useSelector(state => state.Cart.showCart);
+  const Cart = useSelector(state => state.Cart.Cart);
   const dispatch = useDispatch()
  
     const handlCickShowCart = ()=>{
@@ -37,8 +38,11 @@ const Header = () =>  {
           </li>
         </ul>
        </div>
-        <div onClick={()=>handlCickShowCart()} className="cart hover:cursor-pointer flex justify-center">
-          <FontAwesomeIcon icon={faCartShopping} />
+        <div onClick={()=>handlCickShowCart()} className="cart relative hover:cursor-pointer flex justify-center">
+          <FontAwesomeIcon   icon={faCartShopping} />
+           <div className='absolute top-[-1rem] right-[-1rem] w-5 h-5 rounded-full flex flex-col justify-center items-center bg-red-600 ' >
+           <span className='text-white text-sm font-semibold' >{Cart.length}</span>
+           </div>
         </div>
         <div className="avata hover:cursor-pointer">
           <img className="w-[2.5rem] h-[2.5rem]" src={avtata} alt="Avatar" />
