@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
 import '@fortawesome/fontawesome-free/css/all.min.css'
 .text-textColor{
     --tw-text-opacity: 1;
@@ -63,7 +64,22 @@ color: rgb(156 160 171 / var(--tw-text-opacity));
     animation: slideIn 0.3s ease-out forwards;
   }
 
+.bike-animotion{
+  @apply motion-scale-in-[0.5] motion-translate-x-in-[-120%] motion-translate-y-in-[-60%] motion-opacity-in-[33%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-delay-[0.38s]/scale motion-duration-[0.38s]/opacity motion-duration-[1.20s]/rotate motion-duration-[0.15s]/blur motion-delay-[0.60s]/blur motion-ease-spring-bouncier
+}
 
+.animotion-left-to-right{
+  @apply motion-translate-x-in-[-169%] motion-translate-y-in-[0%] motion-duration-[3s]
+}
   
+.animotion-right-to-left{
+  @apply motion-translate-x-in-[154%] motion-translate-y-in-[0%] motion-duration-[3s]
+}
+.animotion-top-to-bottom{
+  @apply motion-translate-x-in-[-1%] motion-translate-y-in-[-118%] motion-duration-[2s]
+}
+.animotion-bottom-to-top{
+  @apply motion-translate-x-in-[4%] motion-translate-y-in-[199%] motion-duration-[2.25s]
+}
  
   

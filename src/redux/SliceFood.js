@@ -16,18 +16,9 @@ export const SliceFood = createSlice({
     fetchDataFoodFruits(state,action) {
       state.FoodFruits = action.payload
     },
+
+    
   
-    // addUsers(state, action) {
-    //   state.Users = [...state.Users, action.payload];
-    // },
-    // editUsers(state, action) {
-    //   const index = state.Users.findIndex(users => users.id === action.payload.id);
-    //     index ? state.Users[index] = action.payload : state.Users
-      
-    // },
-    // deleteUsers(state, action) {
-    //   state.Users = state.Users.filter(users => users.id !== action.payload);
-    // },
     
   },
 });

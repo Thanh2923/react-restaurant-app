@@ -1,15 +1,18 @@
+import { Outlet,useLocation } from "react-router-dom";
+import Header from "./components/Header"; // Đảm bảo rằng đường dẫn này đúng
 
-import Header from "./components/Header"
-import MainContent from "./components/MainContent"
+import './index.css';
+import Home from "./pages/Home";
 
 const App = () => {
-  
+  const location = useLocation(); 
   return (
-    <div className="w-full h-auto flex flex-col bg-purple-50 ">
-      <Header/>
-       <MainContent/>
+    <div className="w-full h-auto flex flex-col bg-white">
+      <Header />
+      {location.pathname === "/react-restaurant-app/" && <Home />}
+      <Outlet /> {/* Đây là nơi các component con sẽ được render */}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
