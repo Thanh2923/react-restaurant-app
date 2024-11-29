@@ -79,7 +79,7 @@ color: rgb(156 160 171 / var(--tw-text-opacity));
   @apply motion-translate-x-in-[-1%] motion-translate-y-in-[-118%] motion-duration-[2s]
 }
 .animotion-bottom-to-top{
-  @apply motion-translate-x-in-[4%] motion-translate-y-in-[199%] motion-duration-[2.25s]
+  @apply motion-translate-x-in-[4%] motion-translate-y-in-[199%] motion-duration-[3s]
 }
  
   
