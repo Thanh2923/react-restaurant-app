@@ -44,6 +44,7 @@ const GoogleLoginButton = () => {
 
   return (
     <div className="App mt-[200px]">
+    <h2>Hello</h2>
       <h1>Login with Google</h1>
       <GoogleOAuthProvider clientId="510283948036-q5vh4tsbgq2lvnr5bulm1u71k146ic3j.apps.googleusercontent.com">
         <GoogleLogin
