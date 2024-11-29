@@ -11,7 +11,7 @@ const AnimotionItemPro = ({ children,animotion }) => {
           setIsVisible(true); // Khi phần tử nằm trong viewport
         }
       },
-      { threshold: 0.1 } // 10% của phần tử nằm trong viewport
+      { threshold: 0.3 } // 10% của phần tử nằm trong viewport
     );
 
     if (sectionRef.current) {
