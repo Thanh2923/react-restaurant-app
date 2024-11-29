@@ -11,7 +11,7 @@ const App = () => {
     <div className="w-full h-auto flex flex-col bg-white">
       <Header />
       <GoogleLoginButton/>
-      {location.pathname === "/react-restaurant-app/" && <Home />}
+      {location.pathname === "/" && <Home />}
       <Outlet /> {/* Đây là nơi các component con sẽ được render */}
     </div>
   );

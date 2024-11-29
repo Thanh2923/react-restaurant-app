@@ -25,11 +25,11 @@ const Header = () =>  {
       <div className="flex gap-8 motion-preset-bounce animotion-top-to-bottom  items-center">
        <div className='hidden md:block'>
        <ul className=" gap-8 flex    ">
-       <Link to="/react-restaurant-app/">  <li className="relative list-none text-base font-medium text-textColor hover:cursor-pointer hover:before:w-full before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-orange-500 before:transition-all before:duration-300">
+       <Link to="/">  <li className="relative list-none text-base font-medium text-textColor hover:cursor-pointer hover:before:w-full before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-orange-500 before:transition-all before:duration-300">
             Home
           </li>
           </Link>
-          <Link to="/react-restaurant-app/menu"><li className="relative list-none hover:cursor-pointer hover:before:w-full text-base font-medium text-textColor before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-orange-500 before:transition-all before:duration-300">
+          <Link to="/menu"><li className="relative list-none hover:cursor-pointer hover:before:w-full text-base font-medium text-textColor before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-orange-500 before:transition-all before:duration-300">
             Menu
           </li></Link>
           <li className="relative list-none hover:cursor-pointer hover:before:w-full text-base font-medium text-textColor before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-orange-500 before:transition-all before:duration-300">

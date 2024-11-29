@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from './App.jsx';
+import App from "./App.jsx";
 import AllMenuContainer from "./components/AllMenuContainer.jsx";
 const router = createBrowserRouter([
   {
-    path: "/react-restaurant-app/", 
-    element: <App/>,
+    path: "/",
+    element: <App />,
     children: [
-     {
-      path: "menu", 
-      element: <AllMenuContainer/>,
-     }
+      {
+        path: "menu",
+        element: <AllMenuContainer />,
+      },
     ],
   },
 ]);
