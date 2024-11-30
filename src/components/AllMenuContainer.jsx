@@ -9,9 +9,11 @@ import { getAllDataFoodByCategory } from '../redux/Food_Thunk';
 import { addCart } from '../redux/SliceCart'; 
 import { throttle } from 'lodash';// Import the addCart action
 import AnimotionItemPro from './AnimotionItemPro';
-
+import GetUser from '../auth/GetUser';
 const AllMenuContainer = () => {
   const navigate = useNavigate();
+  const user = GetUser();
+  
   const [animationState, setAnimationState] = useState({});
     const dispatch = useDispatch();
     const {dataFood,total} = useSelector(state => state.Food.Food);
@@ -22,7 +24,7 @@ const AllMenuContainer = () => {
     
     const handleClickAddCart = useCallback(
       
-      throttle((item) => {
+      throttle((item,user) => {
         
       setAnimationState((prev) => ({
         ...prev,
@@ -36,13 +38,21 @@ const AllMenuContainer = () => {
           [item.id]: false,
         }));
       }, 500);
-        const result = dispatch(addCart(item)); 
-        if (result) {
-          toast.success("Thêm vào giỏ hàng thành công");
-        }
+
+     
+      if(user !== null){
+        dispatch(addCart(item)); 
+        toast.success("Thêm vào giỏ hàng thành công");
+        
+      }else{
+     
+        toast.warning("Bạn chưa login, vui lòng ấn vào avatar để login bằng google");
+      }
+  
+       
       }, 2000), // Delay in milliseconds (3 seconds)
       [dispatch],
-
+  
     );
 
     const handleUrlPage = (page, pageSize) => {
@@ -50,11 +60,13 @@ const AllMenuContainer = () => {
       dispatch(getAllDataFoodByCategory({ page, limit: pageSize })); // Gọi action để lấy dữ liệu
     };
 
+  
     
   return (
    <>
     <div className='w-full p-6 px-16 mt-20 '>
     <ToastContainer
+    className="top-0 left-[35%]"
   position="top-right"
   autoClose={5000}
   hideProgressBar={false}
@@ -71,7 +83,7 @@ const AllMenuContainer = () => {
     <AnimotionItemPro animotion={"animotion-bottom-to-top"} >
 
     <div className="flex w-[95%] py-10 rounded-lg m-auto bg-purple-100 flex-wrap justify-center mb-10  gap-8 items-center mt-5">
-      <ItemProduct data={Array.isArray(dataFood) ? dataFood : []} onAddProduct={handleClickAddCart} animationState={animationState}/> 
+      <ItemProduct user={user} data={Array.isArray(dataFood) ? dataFood : []} onAddProduct={handleClickAddCart} animationState={animationState}/> 
     </div>
     </AnimotionItemPro>
  

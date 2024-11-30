@@ -1,19 +1,42 @@
 import logo from '../assets/logo.0f99324454e3c3ccba98.png';
-import avtata from '../assets/avata.png';
+import Cookies from 'js-cookie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch,useSelector } from 'react-redux';
-
-import { setCart } from '../redux/SliceCart';
+import { useState,useEffect } from 'react';
+import { fetchCartForUser, setCart } from '../redux/SliceCart';
 import { Link } from 'react-router-dom';
+import GoogleLoginButton from './GoogleLogin';
+import Avatar2 from '../assets/avata2.jpg'
 const Header = () =>  {
-  const cartItems = useSelector(state => state.Cart.showCart);
+  const [user, setUser] = useState(null);
   const Cart = useSelector(state => state.Cart.Cart);
   const dispatch = useDispatch()
  
     const handlCickShowCart = ()=>{
       dispatch(setCart(false))
     }
+    const handleLogout = () => {
+      // Xóa token và thông tin người dùng từ cookie
+      Cookies.remove('google_access_token');
+      Cookies.remove('user_info');
+      setUser(null); 
+      window.location.reload()
+    };
+
+    useEffect(() => {
+      // Lấy thông tin người dùng từ cookie
+      const userInfo = Cookies.get('user_info');
+      if (userInfo) {
+        setUser(JSON.parse(userInfo));  // Chuyển đổi chuỗi JSON thành đối tượng
+      }
+    }, []);
+
+    
+  useEffect(()=>{
+    dispatch(fetchCartForUser())
+  },[dispatch])
+  
 
 
   return (
@@ -43,11 +66,23 @@ const Header = () =>  {
         <div onClick={()=>handlCickShowCart()} className="cart relative hover:cursor-pointer flex justify-center">
           <FontAwesomeIcon   icon={faCartShopping} />
            <div className='absolute top-[-1rem] right-[-1rem] w-5 h-5 rounded-full flex flex-col justify-center items-center bg-red-600 ' >
-           <span className='text-white text-sm font-semibold' >{Cart.length}</span>
+           <span className='text-white text-sm font-semibold' >{user ===null ? "0" : Cart.length}</span>
            </div>
         </div>
-        <div className="avata hover:cursor-pointer">
-          <img className="w-[2.5rem] h-[2.5rem]" src={avtata} alt="Avatar" />
+        <div className="avata flex relative group  items-center hover:cursor-pointer">
+          {user !== null ? <>
+            <img src={Avatar2 } className='w-15  h-10 rounded-full' alt="" />  
+            <span>{user.name}</span>
+            <div className="logout-text absolute top-10 mt-2 left-0 bg-white text-black px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button onClick={handleLogout}>Đăng xuất</button>
+          </div>
+          </>
+          : <GoogleLoginButton/>
+          
+          
+         
+          }
+          
         </div>
       </div>
     </div>

@@ -1,7 +1,17 @@
 import { useSelector } from 'react-redux';
-
+import { useEffect,useState } from 'react';
+import Cookies from 'js-cookie';
+import { button } from 'framer-motion/client';
+import { Link } from 'react-router-dom';
 const TatalCart = () => {
-
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    // Lấy thông tin người dùng từ cookie
+    const userInfo = Cookies.get('user_info');
+    if (userInfo) {
+      setUser(JSON.parse(userInfo));  // Chuyển đổi chuỗi JSON thành đối tượng
+    }
+  }, []);
 const Cart = useSelector(state => state.Cart.Cart);
 const subtotal = Cart.reduce((acc, item) => acc + (item.tatal), 0);
   return (
@@ -20,7 +30,9 @@ const subtotal = Cart.reduce((acc, item) => acc + (item.tatal), 0);
       <span className=" text-white text-xl font-bold">$ {parseFloat(subtotal.toFixed(2)) + 12}</span>
       </div>
       <div className="w-full bg-orange-500 py-2 rounded-3xl">
-        <p className="text-center hover:cursor-pointer font-bold text-white text-lg">Login to check out</p>
+        <p className="text-center hover:cursor-pointer font-bold text-white text-lg">{user === null ? "Login to check out":
+       <Link to="pay" ><button type='button' >Pay</button></Link>
+        }</p>
       </div>
     </div>
   )

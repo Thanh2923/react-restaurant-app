@@ -7,19 +7,21 @@ import { useEffect,useCallback,useState } from 'react';
 import { getDataFoodFruitsByCategory } from '../redux/Food_Thunk';
 import { addCart } from '../redux/SliceCart'; // Import the addCart action
 import { throttle } from 'lodash';
+import GetUser from "../auth/GetUser";
 const AllOurFreshItem = () => {
+  const user = GetUser();
   const dispatch = useDispatch();
   const [animationState, setAnimationState] = useState({});
   const FoodFruits = useSelector(state => state.Food.FoodFruits);
-  
+
   useEffect(() => {
     dispatch(getDataFoodFruitsByCategory(6)); // Fetch food items of category 5
   }, [dispatch]);
 
-  
+ 
   const handleClickAddCart = useCallback(
       
-    throttle((item) => {
+    throttle((item,user) => {
       
     setAnimationState((prev) => ({
       ...prev,
@@ -33,10 +35,16 @@ const AllOurFreshItem = () => {
         [item.id]: false,
       }));
     }, 500);
-      const result = dispatch(addCart(item)); 
-      if (result) {
-        toast.success("Thêm vào giỏ hàng thành công");
-      }
+    if(user !== null){
+      dispatch(addCart(item)); 
+      toast.success("Thêm vào giỏ hàng thành công");
+      
+    }else{
+   
+      toast.warning("Bạn chưa login, vui lòng ấn vào avatar để login bằng google");
+    }
+
+     
     }, 2000), // Delay in milliseconds (3 seconds)
     [dispatch],
 
@@ -44,6 +52,7 @@ const AllOurFreshItem = () => {
   return (
     <>
     <ToastContainer
+     className="top-0 left-[35%]"
   position="top-right"
   autoClose={5000}
   hideProgressBar={false}
@@ -59,7 +68,7 @@ const AllOurFreshItem = () => {
 <div className="flex flex-wrap justify-center gap-3 items-center my-10">
 
 
-     <ItemProduct data={FoodFruits} onAddProduct={handleClickAddCart} animationState={animationState}/>
+     <ItemProduct user={user} data={FoodFruits} onAddProduct={handleClickAddCart} animationState={animationState}/>
 
     </div>
 

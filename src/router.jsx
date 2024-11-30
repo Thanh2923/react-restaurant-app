@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import AllMenuContainer from "./components/AllMenuContainer.jsx";
+
+import PaymentPage from "./components/PaymentPage.jsx";
+import Menu from "./pages/Menu.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -8,7 +10,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "menu",
-        element: <AllMenuContainer />,
+        element: <Menu/>
+      },
+      {
+        path: "pay",
+        element: <PaymentPage />,
       },
     ],
   },

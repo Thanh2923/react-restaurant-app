@@ -15,9 +15,9 @@ const HomeContainer = () => {
           </div>
         </div>
       
-        <p className="text-[5rem] font-bold text-textColor">
+        <div className="text-[5rem] font-bold text-textColor">
         <TextCarousel/>
-        </p>
+        </div>
        
         <p className="text-base animotion-left-to-right transform motion-duration-500 text-textColor">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt consectetur, odio dolor quo aspernatur eum optio, tempore, voluptate iure atque quia reprehenderit! Aliquid, necessitatibus aspernatur. Tempore sapiente error nobis illum.
