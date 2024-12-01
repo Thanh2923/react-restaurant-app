@@ -3,13 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus,faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useSelector,useDispatch} from 'react-redux';
 import { decrementQuantity, incrementQuantity } from '../redux/SliceCart';
+import GetUser from '../auth/GetUser';
+import { useEffect, useState } from 'react';
 
 
 
 const CartItemContainer = ({setIsModalOpen,setIdCartItem}) => {
+  const [user,setUser] = useState(0)
   const dispatch = useDispatch();
+   const id =  user ? user.id : null
   const Cart = useSelector(state => state.Cart.Cart);
-   
+  const CartByIdUser = Cart.filter(item=>item.userId === id) 
+ 
   const handClickIncrease = (id)=>{
     dispatch(incrementQuantity(id))    
   }
@@ -23,9 +28,12 @@ const CartItemContainer = ({setIsModalOpen,setIdCartItem}) => {
     }
      
   }
+  useEffect(()=>{
+    setUser(GetUser())
+  },[])
   return (
     <div className=" mb-10 absolute overflow-y-scroll scrollbar-none scrollbar-hidden  right-0 flex flex-col gap-3 bottom-0 0 w-full py-10 px-5 h-[80%] rounded-t-[2rem]  shadow-lg bg-cartBg" >
-  { Cart.map(item=>(
+  {  CartByIdUser.map(item=>(
     <>
        <div className="w-full  flex rounded-md flex-col justify-center items-center gap-1 bg-cartItem ">
     <div className="w-full flex gap-1 py-1 px-3 items-center">

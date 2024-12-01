@@ -7,9 +7,14 @@ import { useSelector,useDispatch } from 'react-redux';
 import { setCart, ClearCart, decrementQuantity, fetchCartForUser } from '../redux/SliceCart';
 import { useEffect, useState } from 'react';
 import ConfirmDeleteModal from './ConfirmDeleteModal';
+import GetUser from '../auth/GetUser';
 const CartContainer = () => {
+  const  [user,setUser] = useState(0);
   const cartItems = useSelector(state => state.Cart.showCart); 
   const Cart = useSelector(state => state.Cart.Cart); 
+  const id = user ? user.id : null;
+  const CartByIdUser = Cart.filter(item=>item.userId === id) 
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [idCartItem,setIdCartItem] = useState(null);
   const dispatch = useDispatch()
@@ -37,6 +42,10 @@ const CartContainer = () => {
     dispatch(fetchCartForUser())
   },[dispatch])
 
+
+   useEffect(()=>{
+    setUser(GetUser())
+  },[])
   return (
 
     <>
@@ -58,7 +67,7 @@ const CartContainer = () => {
        <p className='text-textColor font-semibold flex justify-center items-center py-5 text-xl'>Add some items to your cart</p>
   </div>
   
-   {Cart.length > 0 ? <>
+   { user && CartByIdUser.length >0 ? <>
     <CartItemContainer  setIsModalOpen={setIsModalOpen} setIdCartItem={setIdCartItem}/>
   <TatalCart/></>
  : ""
