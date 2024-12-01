@@ -34,7 +34,7 @@ const HomeContainer = () => {
       <div className="w-full animotion-right-to-left gap-6 justify-center flex-1 flex-col relative">
         <img src={heroBg} className="h-50 w-[70%] hidden md:block ml-auto" alt="Hero Background" />
         <div className="flex md:absolute flex-wrap w-full top-0 left-0 justify-center items-center gap-3">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 h-auto">
             <ItemProductHome />
             <ItemProductHome />
             <ItemProductHome />

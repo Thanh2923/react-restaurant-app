@@ -45,7 +45,7 @@ const TextCarousel = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.2 }}
-        className="text-[5rem] text-orange-600 font-bold"
+        className="lg:text-[5rem] text-[3rem] text-orange-600 font-bold"
       >
         {displayedText}
         <span style={{ opacity: showCursor ? 1 : 0,  marginLeft: "5px", }}>|</span>

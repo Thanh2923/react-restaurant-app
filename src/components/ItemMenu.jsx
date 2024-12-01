@@ -8,13 +8,13 @@ const ItemMenu = ({user,Food,handleClickAddCart,animationState}) => {
     <>
     
       {Food.map((item) => (
-        <div key={item.id} className="w-[280px] hover:drop-shadow-lg rounded-lg h-[195px] bg-cardOverplay">
+        <div key={item.id} className="lg:w-[280px] w[45%] my-5 hover:drop-shadow-lg rounded-lg h-[195px] bg-cardOverplay">
           <div className="flex justify-between items-center">
             <div className='w-36 imgShowTo mx-3 drop-shadow-2xl'>
               {/* Nối đường dẫn assets với tên ảnh */}
               <img src={item.img} className='w-full h-[110px] hover-zoom' alt={item.name} />
             </div>
-            <div onClick={()=>handleClickAddCart(item,user)} className={`w-7  hover:cursor-pointer h-7 flex justify-center items-center  bg-red-700 rounded-full mx-3 ${animationState[item.id] ? 'motion-preset-expand motion-duration-500' : '' } ` }>
+            <div onClick={()=>handleClickAddCart(item,user)} className={`w-7  hover:cursor-pointer h-7 flex justify-center items-center  bg-red-700 rounded-full lg:mx-3  ${animationState[item.id] ? 'motion-preset-expand motion-duration-500' : '' } ` }>
               <FontAwesomeIcon className='text-[0.75rem]' icon={faCartShopping} style={{ color: "#ffffff" }} />
             </div>
           </div>
