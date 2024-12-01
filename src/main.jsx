@@ -8,7 +8,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { RouterProvider } from 'react-router-dom';
 import router from './router.jsx'; // Đảm bảo rằng đường dẫn này đúng
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <GoogleOAuthProvider clientId="270225925118-kc36r38s9176nsrnjhdi5vuq0p1iirg6.apps.googleusercontent.com">
+  <GoogleOAuthProvider clientId="532407516403-bjakko381trf5f8beqfbtl1rb4bc2v7l.apps.googleusercontent.com">
 <Provider store={store}>
     <React.StrictMode>
       <RouterProvider router={router} />
