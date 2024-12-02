@@ -19,9 +19,9 @@ const ItemMenu = ({user,Food,handleClickAddCart,animationState}) => {
             </div>
           </div>
           <div className='flex w-full flex-col justify-end items-end'>
-            <p className='font-semibold text-xl px-3'>{item.name}</p>
+            <p className='font-semibold lg:text-xl text-md px-3'>{item.name}</p>
             <p className='text-lighttextGray px-3'>{item.calories} Calories</p>
-            <p className='px-3 pt-4 font-semibold text-xl'>
+            <p className='px-3 pt-4 font-semibold lg:text-xl text-md'>
               <span className='text-red-600 text-base'>$</span>{item.price}
             </p>
           </div>
