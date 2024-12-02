@@ -49,7 +49,7 @@ const CartContainer = () => {
   return (
 
     <>
-    { cartItems ? "" :   <div className="fixed top-0 py-5 px-5 right-0 lg:w-[27%] w-[50%] shadow-lg rounded-sm z-20 h-screen bg-white slide-in slide-out ">
+    { cartItems ? "" :   <div className="fixed top-0 py-5 px-5 right-0 lg:w-[27%] w-[65%] shadow-lg rounded-sm z-20 h-screen bg-white slide-in slide-out ">
   <div className="w-full mb-10  flex justify-between items-center">
 
    <button type='button'  onClick={()=>handlCickShowCart()}><FontAwesomeIcon icon={faLeftLong} className='font-bold text-xl' /> </button>  
