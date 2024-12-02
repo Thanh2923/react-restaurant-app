@@ -51,14 +51,14 @@ const Header = () =>  {
 
   return (
     
-    <div className="p-6 lg:px-16 px-4 w-full fixed flex z-10 bg-white  shadow-sm justify-between">
+    <div className="p-6 lg:px-16 px-4  w-full fixed flex z-10 bg-white  shadow-sm justify-between">
        
       <div className="flex gap-2">
         <img className="w-[2rem] motion-preset-oscillate  h-[2rem]" src={logo} alt="Logo" />
         <h3 className="text-xl motion-preset-oscillate  font-bold">City</h3>
       </div>
-      <div className="flex gap-8 motion-preset-bounce animotion-top-to-bottom  items-center">
-       <div className='hidden lg:block'>
+      <div className="flex gap-8 motion-preset-bounce  animotion-top-to-bottom  items-center">
+       <div className='hidden m-auto lg:block'>
        <ul className=" gap-8 flex    ">
        <Link to="/">  <li className="relative list-none py-2 text-base font-medium text-textColor hover:cursor-pointer hover:before:w-full before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-orange-500 before:transition-all before:duration-300">
             Home
