@@ -65,7 +65,7 @@ const AllOurFreshItem = () => {
 />
 
 <AnimotionItemPro animotion={"animotion-left-to-right"} >
-<div className="  grid grid-cols-2 lg:grid-cols-4 lg:gap-3 justify-center gap-5 items-center my-10">
+<div className="  grid grid-cols-2 lg:w-[95%] w-[98%] lg:grid-cols-4 lg:gap-3 justify-center gap-5 items-center my-10">
      <ItemProduct user={user} data={FoodFruits} onAddProduct={handleClickAddCart} animationState={animationState}/>
 
     </div>

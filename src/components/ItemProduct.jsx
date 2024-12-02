@@ -5,7 +5,7 @@ const ItemProduct = ({user,data,onAddProduct,animationState}) => {
   return (
 <>
   {data.map((item) => (
-        <div key={item.id} className="lg:w-[280px] w[45%] my-5  hover:drop-shadow-lg rounded-lg h-[195px] bg-cardOverplay">
+        <div key={item.id} className="lg:w-[280px] w[50%] my-5  hover:drop-shadow-lg rounded-lg h-[195px] bg-cardOverplay">
           <div className="flex justify-between items-center">
             <div className='w-36 imgShowTo mx-3 drop-shadow-2xl'>
               {/* Nối đường dẫn assets với tên ảnh */}

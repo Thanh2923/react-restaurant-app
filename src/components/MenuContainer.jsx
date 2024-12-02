@@ -78,7 +78,7 @@ const MenuContainer = () => {
                  </AnimotionItemPro>
                 
                <AnimotionItemPro animotion={"animotion-bottom-to-top"}>
-               <div className="grid lg:grid-cols-4 grid-cols-2 justify-center mb-10  gap-3 items-center mt-5">
+               <div className="grid lg:grid-cols-4 lg:w-[95%] w-[98%] grid-cols-2 justify-center mb-10  gap-3 items-center mt-5">
                   <ItemMenu user={user} Food={Food} handleClickAddCart={handleClickAddCart} animationState={animationState}/>
                   
 

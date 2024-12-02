@@ -64,7 +64,7 @@ const AllMenuContainer = () => {
     
   return (
    <>
-    <div className='w-full p-6 px-16 mt-20 '>
+    <div className='w-full p-6 lg:px-16 px-5 mt-20 '>
     <ToastContainer
     className="top-0 left-[35%]"
   position="top-right"
@@ -82,7 +82,7 @@ const AllMenuContainer = () => {
     </div>
     <AnimotionItemPro animotion={"animotion-bottom-to-top"} >
 
-    <div className="flex w-[95%] py-10 rounded-lg m-auto bg-purple-100 flex-wrap justify-center mb-10  gap-8 items-center mt-5">
+    <div className="flex lg:w-[95%] w-[98%] py-10 rounded-lg m-auto bg-purple-100 flex-wrap justify-center mb-10  gap-8 items-center mt-5">
       <ItemProduct user={user} data={Array.isArray(dataFood) ? dataFood : []} onAddProduct={handleClickAddCart} animationState={animationState}/> 
     </div>
     </AnimotionItemPro>
