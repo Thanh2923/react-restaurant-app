@@ -51,7 +51,7 @@ const Header = () =>  {
 
   return (
     
-    <div className="p-6 px-16 w-full fixed flex z-10 bg-white  shadow-sm justify-between">
+    <div className="p-6 lg:px-16 px-4 w-full fixed flex z-10 bg-white  shadow-sm justify-between">
        
       <div className="flex gap-2">
         <img className="w-[2rem] motion-preset-oscillate  h-[2rem]" src={logo} alt="Logo" />
@@ -106,7 +106,7 @@ const Header = () =>  {
         <div className="avata flex relative group  items-center hover:cursor-pointer">
           {user !== null ? <>
             <img src={Avatar2 } className='w-15  h-10 rounded-full' alt="" />  
-            <span> {user.name}</span>
+            <span className='w-15'> {user.name}</span>
             <div className="logout-text absolute top-10 mt-2 left-0 bg-white text-black px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <button onClick={handleLogout}>Đăng xuất</button>
           </div>

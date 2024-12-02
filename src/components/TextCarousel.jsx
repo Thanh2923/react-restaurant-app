@@ -40,7 +40,7 @@ const TextCarousel = () => {
   const displayedText = text.slice(0, currentIndex); // Lấy chuỗi hiện tại theo vị trí
 
   return (
-    <div className="h-[350px]">
+    <div className="h-[500px]">
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
